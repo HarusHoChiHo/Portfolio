@@ -4,6 +4,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 #navlinks{
@@ -27,8 +29,22 @@
   width: 100%;
 }
 
+.description_title {
+  font-size: 1.6rem;
+  font-style: italic;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .description{
   width: 100%;
   text-align: left;
+  font-size: 1.3rem;
+
 }
 
+hr {
+  width: 65%;
+  margin: 2rem 0;
+  color: white;
+}
