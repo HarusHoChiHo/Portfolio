@@ -1,0 +1,15 @@
+#mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#profileImg {
+  width: 15%;
+}
+
+#resume {
+  text-decoration-color: white;
+  color: white;
+}
