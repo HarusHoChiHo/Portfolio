@@ -40,11 +40,24 @@
   width: 100%;
   text-align: left;
   font-size: 1.3rem;
-
 }
 
-hr {
+.cards_divider {
   width: 65%;
-  margin: 2rem 0;
-  color: white;
+}
+
+.link_section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.link_section span {
+  width: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:  center;
+  font-size:  1.5rem;
 }
