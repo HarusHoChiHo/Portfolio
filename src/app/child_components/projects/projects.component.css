@@ -1,67 +1,73 @@
 #container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-#navlinks{
-  display: flex;
-  justify-content: space-around;
-  width: 30%;
-  margin: 1rem 0;
+#navlinks {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    margin: 1rem 0;
 }
 
 .link {
-  cursor: pointer;
-  text-decoration: underline;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .projectContainer {
-  width: 65%;
-  
+    width: 65%;
+
 }
 
 .project_panel {
-  margin: 1rem 0;
-  width: 65%;
+    margin: 1rem 0;
+    width: 65%;
 }
 
 .projectImage {
-  width: 100%;
+    width: 100%;
 }
 
 .description_title {
-  font-size: 1.6rem;
-  font-style: italic;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+    font-size: 1.6rem;
+    font-style: italic;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
-.description{
-  width: 100%;
-  text-align: left;
-  font-size: 1.3rem;
+.description {
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: justify;
+    box-decoration-break: clone;
+}
+
+.rfps_desc {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .cards_divider {
-  width: 65%;
+    width: 65%;
 }
 
 .link_section {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .link_section span {
-  width: 10px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items:  center;
-  font-size:  1.5rem;
+    width: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
 }

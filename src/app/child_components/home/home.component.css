@@ -19,6 +19,8 @@ p-panel {
 .about_content {
   font-size: 1.25rem;
   padding: 8px;
+  text-align: justify;
+  box-decoration-break: clone;
 }
 
 #about_title {
