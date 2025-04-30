@@ -22,7 +22,12 @@
 
 .projectContainer {
   width: 65%;
+  
+}
+
+.project_panel {
   margin: 1rem 0;
+  width: 65%;
 }
 
 .projectImage {
@@ -50,7 +55,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 12px;
 }
 
 .link_section span {

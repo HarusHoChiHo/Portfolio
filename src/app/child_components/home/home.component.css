@@ -5,13 +5,28 @@
   justify-content: center;
 }
 
-#title {
-  font-size: 3rem;
-  width: 50%;
-  text-align: center;
+p-panel {
+  width: 65%;
 }
 
-#missionStatement {
+#title {
+  font-size: 4rem;
+  width: 50%;
+  text-align: center;
+  margin-top:  50px;
+}
+
+.about_content {
+  font-size: 1.25rem;
+  padding: 8px;
+}
+
+#about_title {
   font-size: 1.5rem;
-  width: 75%;
+  font-weight: bold;
+}
+
+#contact{
+  width: 65%;
+  margin-bottom: 0.75rem;
 }

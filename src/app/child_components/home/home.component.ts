@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
+import {Panel} from "primeng/panel";
+import {ContactComponent} from "../contact/contact.component";
 
 @Component({
-  selector: 'app-home',
+  selector   : 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  imports: [
+    Panel,
+    ContactComponent
+  ],
+  styleUrl   : './home.component.css'
 })
 export class HomeComponent {
 
