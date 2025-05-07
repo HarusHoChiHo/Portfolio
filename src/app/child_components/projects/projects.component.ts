@@ -3,7 +3,7 @@ import {CardModule} from "primeng/card";
 import {Divider} from "primeng/divider";
 import {ButtonModule} from "primeng/button";
 import {Panel} from "primeng/panel";
-import {Fieldset} from "primeng/fieldset";
+import {Ripple} from "primeng/ripple";
 
 @Component({
     selector   : 'app-projects',
@@ -13,7 +13,8 @@ import {Fieldset} from "primeng/fieldset";
         CardModule,
         Divider,
         ButtonModule,
-        Panel
+        Panel,
+        Ripple
     ]
 })
 export class ProjectsComponent {
