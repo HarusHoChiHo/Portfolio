@@ -10,5 +10,5 @@ import {Divider} from "primeng/divider";
   styleUrl   : './contact.component.css'
 })
 export class ContactComponent {
-
+  email = "harusho@harusho.slmail.me";
 }

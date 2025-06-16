@@ -6,6 +6,92 @@
     >
         <ng-template #header>
             <div>
+                <h2>RFPS back end application (Rust, Axum, SeaORM, PostgresSQL, Docker)</h2>
+                <div class="link_section">
+                    <a
+                            pButton
+                            pRipple
+                            severity="primary"
+                            size="small"
+                            href="https://rfps-rust.up.railway.app/swagger-ui/#/"
+                            target="_blank"
+                    >
+                        <i
+                                class="pi pi-arrow-up-right"
+                                style="font-size: 0.75rem"
+                        ></i>
+                        Visit the website
+                    </a>
+                    <span>
+                    <p-divider
+                            layout="vertical"
+                            type="solid"
+                            align="center"
+                    />
+                </span>
+                    <a
+                            pButton
+                            pRipple
+                            severity="primary"
+                            size="small"
+                            href="https://github.com/HarusHoChiHo/Restaurant_Food_Planning_System/tree/backend_rust"
+                            target="_blank"
+                    >
+                        <i
+                                class="pi pi-arrow-up-right"
+                                style="font-size: 0.75rem"
+                        ></i>
+                        View the source code on GitHub
+                    </a>
+                </div>
+            </div>
+        </ng-template>
+        <p-card
+                id="rfps_rust_section"
+        >
+            <ng-template
+                #content
+                class="p-card-body"
+            >
+                <img
+                        src="rust_swagger.png"
+                        alt="Swagger UI"
+                        class="projectImage"
+                />
+                <p-divider />
+                <!--             <h3 class="description_title">Description</h3> -->
+                <p class="description">
+                    This bakc-end application is developed with Axum and SeaORM for interactions between database and
+                    the application. It provides various API endpoints for accessing and modifying data. All of the data
+                    are stored in Postgres database, which is a popular option for data storage. To ensure a easy
+                    deployment to different cloud platform, I decided to build this application as a docker image. That
+                    allows the application to be deployed to different platforms without dramatic changes. It works even
+                    some platforms do not have native support for Rust.
+
+                    For application release, Railway is chosen to host this application. It is a cloud platform provides
+                    software as a service and supports automated deployment, where each time a push to this repo happens
+                    the platform will automatically build and deploy the latest version of the application.
+
+                    The whole deployment process will be getting Dockerfile ready, pushing changes to GitHub, and
+                    monitoring the deployment process through Railway's dashboard. Upon the deployment is done, I will
+                    do some testings through the Swagger UI to ensure the application works well.
+
+                    Overall, this web application is developed in Rust, providing endpoints for users to retrieve and
+                    edit data in database by sending requests to the service and receiving responses from the service
+                    via HTTP endpoints. All data in requests and responses are in JSON format, which is a standard data
+                    format in API development.
+                </p>
+            </ng-template>
+        </p-card>
+    </p-panel>
+
+    <p-panel
+            class="project_panel"
+            [toggleable]="true"
+            [collapsed]="true"
+    >
+        <ng-template #header>
+            <div>
                 <h2>A blog website (Next.js, SpringBoot, MongoDB)</h2>
                 <div class="link_section">
                     <a
@@ -16,7 +102,10 @@
                             href="https://dfr-blog-8e7460cbd309.herokuapp.com/pages/article_list"
                             target="_blank"
                     >
-                        <i class="pi pi-arrow-up-right" style="font-size: 0.75rem"></i>
+                        <i
+                                class="pi pi-arrow-up-right"
+                                style="font-size: 0.75rem"
+                        ></i>
                         Visit the website
                     </a>
                     <span>
@@ -34,7 +123,10 @@
                             href="https://github.com/HarusHoChiHo/Blog-for-Dans-Farmaroot"
                             target="_blank"
                     >
-                        <i class="pi pi-arrow-up-right" style="font-size: 0.75rem"></i>
+                        <i
+                                class="pi pi-arrow-up-right"
+                                style="font-size: 0.75rem"
+                        ></i>
                         View the source code on GitHub
                     </a>
                 </div>
@@ -55,7 +147,6 @@
                 <p-divider />
                 <!--             <h3 class="description_title">Description</h3> -->
                 <p class="description">
-
                     We collaborated with client to figure out the requirement of the system and
                     user
                     interface.
@@ -89,7 +180,10 @@
                             href="https://rfps-web-c0b1f622dc6f.herokuapp.com/"
                             target="_blank"
                     >
-                        <i class="pi pi-arrow-up-right" style="font-size: 0.75rem"></i>
+                        <i
+                                class="pi pi-arrow-up-right"
+                                style="font-size: 0.75rem"
+                        ></i>
                         Visit the website
                     </a>
                     <span><p-divider
@@ -105,7 +199,10 @@
                             href="https://github.com/HarusHoChiHo/Restaurant_Food_Planning_System"
                             target="_blank"
                     >
-                        <i class="pi pi-arrow-up-right" style="font-size: 0.75rem"></i>
+                        <i
+                                class="pi pi-arrow-up-right"
+                                style="font-size: 0.75rem"
+                        ></i>
                         View the source code on GitHub
                     </a>
                 </div>
@@ -177,7 +274,10 @@
                             href="https://sentiment-analysis-harus-5c89ff2ba763.herokuapp.com/"
                             target="_blank"
                     >
-                        <i class="pi pi-arrow-up-right" style="font-size: 0.75rem"></i>
+                        <i
+                                class="pi pi-arrow-up-right"
+                                style="font-size: 0.75rem"
+                        ></i>
                         Visit the website
                     </a>
                     <span><p-divider
@@ -193,7 +293,10 @@
                             href="https://github.com/HarusHoChiHo/Blog-for-Dans-Farmaroot"
                             target="_blank"
                     >
-                        <i class="pi pi-arrow-up-right" style="font-size: 0.75rem"></i>
+                        <i
+                                class="pi pi-arrow-up-right"
+                                style="font-size: 0.75rem"
+                        ></i>
                         View the source code on GitHub
                     </a>
                 </div>
