@@ -18,4 +18,9 @@ import {Ripple} from "primeng/ripple";
     ]
 })
 export class ProjectsComponent {
+    
+    navigateToExternalSite(url: string) {
+        window.open(url, '_blank');
+    }
+    
 }

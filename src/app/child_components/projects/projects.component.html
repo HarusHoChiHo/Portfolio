@@ -1,27 +1,29 @@
 <div id="container">
+    <!-- Online Shop -->
     <p-panel
             class="project_panel"
             [toggleable]="true"
             [collapsed]="true"
+            id="p_panel_online_shop"
     >
         <ng-template #header>
             <div>
-                <h2>RFPS back end application (Rust, Axum, SeaORM, PostgresSQL, Docker)</h2>
+                <h2>Online Shop (.NET Core, Entity Framework Core, Microservices, PostgresSQL, Docker)</h2>
                 <div class="link_section">
-                    <a
+                    <button
                             pButton
                             pRipple
                             severity="primary"
                             size="small"
-                            href="https://rfps-rust.up.railway.app/swagger-ui/#/"
-                            target="_blank"
+                            [disabled]="true"
+                            (click)="navigateToExternalSite('')"
                     >
                         <i
                                 class="pi pi-arrow-up-right"
                                 style="font-size: 0.75rem"
                         ></i>
                         Visit the website
-                    </a>
+                    </button>
                     <span>
                     <p-divider
                             layout="vertical"
@@ -29,20 +31,87 @@
                             align="center"
                     />
                 </span>
-                    <a
+                    <button
                             pButton
                             pRipple
                             severity="primary"
                             size="small"
-                            href="https://github.com/HarusHoChiHo/Restaurant_Food_Planning_System/tree/backend_rust"
-                            target="_blank"
+                            (click)="navigateToExternalSite('https://github.com/HarusHoChiHo/EShopMicroservices')"
                     >
                         <i
                                 class="pi pi-arrow-up-right"
                                 style="font-size: 0.75rem"
                         ></i>
                         View the source code on GitHub
-                    </a>
+                    </button>
+                </div>
+            </div>
+        </ng-template>
+        <p-card
+                id="online_shop_section"
+        >
+            <ng-template
+                #content
+                class="p-card-body"
+            >
+                <img
+                        src="OnlineShop/home_page.png"
+                        alt="Home Page"
+                        class="projectImage"
+                />
+                <p-divider />
+                <p class="description">
+                    I produced this web application while I was taking the online course on Udemy. The beck end applications were built in microservices and vertical slice architecture for better scalability.
+                    For API exposition, I set up an API gateway to centralize the endpoints; it simplifies the communication between front-end and back-end.
+                    For better portability and scalability, I containerized each service by defining the docker file.
+                </p>
+            </ng-template>
+        </p-card>
+    </p-panel>
+    <!-- RFPS Rust -->
+    <p-panel
+            class="project_panel"
+            [toggleable]="true"
+            [collapsed]="true"
+            id="p_panel_rfps_rust"
+    >
+        <ng-template #header>
+            <div>
+                <h2>RFPS back end application (Rust, Axum, SeaORM, PostgresSQL, Docker)</h2>
+                <div class="link_section">
+                    <button
+                            pButton
+                            pRipple
+                            severity="primary"
+                            size="small"
+                            (click)="navigateToExternalSite('https://rfps-rust.up.railway.app/swagger-ui/#/')"
+                    >
+                        <i
+                                class="pi pi-arrow-up-right"
+                                style="font-size: 0.75rem"
+                        ></i>
+                        Visit the website
+                    </button>
+                    <span>
+                    <p-divider
+                            layout="vertical"
+                            type="solid"
+                            align="center"
+                    />
+                </span>
+                    <button
+                            pButton
+                            pRipple
+                            severity="primary"
+                            size="small"
+                            (click)="navigateToExternalSite('https://github.com/HarusHoChiHo/Restaurant_Food_Planning_System/tree/backend_rust')"
+                    >
+                        <i
+                                class="pi pi-arrow-up-right"
+                                style="font-size: 0.75rem"
+                        ></i>
+                        View the source code on GitHub
+                    </button>
                 </div>
             </div>
         </ng-template>
@@ -84,30 +153,30 @@
             </ng-template>
         </p-card>
     </p-panel>
-
+    <!-- Blog System -->
     <p-panel
             class="project_panel"
             [toggleable]="true"
             [collapsed]="true"
+            id="p_panel_blog_system"
     >
         <ng-template #header>
             <div>
-                <h2>A blog website (Next.js, SpringBoot, MongoDB)</h2>
+                <h2>Blog System (Next.js, SpringBoot, MongoDB)</h2>
                 <div class="link_section">
-                    <a
+                    <button
                             pButton
                             pRipple
                             severity="primary"
                             size="small"
-                            href="https://dfr-blog-8e7460cbd309.herokuapp.com/pages/article_list"
-                            target="_blank"
+                            (click)="navigateToExternalSite('https://dfr-blog-8e7460cbd309.herokuapp.com/pages/article_list')"
                     >
                         <i
                                 class="pi pi-arrow-up-right"
                                 style="font-size: 0.75rem"
                         ></i>
                         Visit the website
-                    </a>
+                    </button>
                     <span>
                     <p-divider
                             layout="vertical"
@@ -115,20 +184,19 @@
                             align="center"
                     />
                 </span>
-                    <a
+                    <button
                             pButton
                             pRipple
                             severity="primary"
                             size="small"
-                            href="https://github.com/HarusHoChiHo/Blog-for-Dans-Farmaroot"
-                            target="_blank"
+                            (click)="navigateToExternalSite('https://github.com/HarusHoChiHo/Blog-for-Dans-Farmaroot')"
                     >
                         <i
                                 class="pi pi-arrow-up-right"
                                 style="font-size: 0.75rem"
                         ></i>
                         View the source code on GitHub
-                    </a>
+                    </button>
                 </div>
             </div>
         </ng-template>
@@ -162,49 +230,48 @@
             </ng-template>
         </p-card>
     </p-panel>
-
+    <!-- RFPS -->
     <p-panel
             class="project_panel"
             [toggleable]="true"
             [collapsed]="true"
+            id="p_panel_rfps"
     >
         <ng-template #header>
             <div>
                 <h2>Restaurant Food Planning System (Next.js, .Net Core, EntityFramework Core, PostgresSQL)</h2>
                 <div class="link_section">
-                    <a
+                    <button
                             pButton
                             pRipple
                             severity="primary"
                             size="small"
-                            href="https://rfps-web-c0b1f622dc6f.herokuapp.com/"
-                            target="_blank"
+                            (click)="navigateToExternalSite('https://rfps-web-c0b1f622dc6f.herokuapp.com/')"
                     >
                         <i
                                 class="pi pi-arrow-up-right"
                                 style="font-size: 0.75rem"
                         ></i>
                         Visit the website
-                    </a>
+                    </button>
                     <span><p-divider
                             layout="vertical"
                             type="solid"
                             align="center"
                     /></span>
-                    <a
+                    <button
                             pButton
                             pRipple
                             severity="primary"
                             size="small"
-                            href="https://github.com/HarusHoChiHo/Restaurant_Food_Planning_System"
-                            target="_blank"
+                            (click)="navigateToExternalSite('https://github.com/HarusHoChiHo/Restaurant_Food_Planning_System')"
                     >
                         <i
                                 class="pi pi-arrow-up-right"
                                 style="font-size: 0.75rem"
                         ></i>
                         View the source code on GitHub
-                    </a>
+                    </button>
                 </div>
             </div>
         </ng-template>
@@ -257,48 +324,48 @@
             </ng-template>
         </p-card>
     </p-panel>
+    <!-- Sentiment Analysis -->
     <p-panel
             class="project_panel"
             [toggleable]="true"
             [collapsed]="true"
+            id="p_panel_sentiment_analysis"
     >
         <ng-template #header>
             <div>
                 <h2>A website for Sentiment Analysis (Django, HTML)</h2>
                 <div class="link_section">
-                    <a
+                    <button
                             pButton
                             pRipple
                             severity="primary"
                             size="small"
-                            href="https://sentiment-analysis-harus-5c89ff2ba763.herokuapp.com/"
-                            target="_blank"
+                            (click)="navigateToExternalSite('https://sentiment-analysis-harus-5c89ff2ba763.herokuapp.com/')"
                     >
                         <i
                                 class="pi pi-arrow-up-right"
                                 style="font-size: 0.75rem"
                         ></i>
                         Visit the website
-                    </a>
+                    </button>
                     <span><p-divider
                             layout="vertical"
                             type="solid"
                             align="center"
                     /></span>
-                    <a
+                    <button
                             pButton
                             pRipple
                             severity="primary"
                             size="small"
-                            href="https://github.com/HarusHoChiHo/Blog-for-Dans-Farmaroot"
-                            target="_blank"
+                            (click)="navigateToExternalSite('https://github.com/HarusHoChiHo/Blog-for-Dans-Farmaroot')"
                     >
                         <i
                                 class="pi pi-arrow-up-right"
                                 style="font-size: 0.75rem"
                         ></i>
                         View the source code on GitHub
-                    </a>
+                    </button>
                 </div>
             </div>
         </ng-template>
