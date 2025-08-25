@@ -24,7 +24,7 @@ public class User : Entity<UserId>
         return user;
     }
 
-    public void UpdateRowSource(UserId userId,
+    public void Update(UserId userId,
                                   string userName,
                                   Password password)
     {

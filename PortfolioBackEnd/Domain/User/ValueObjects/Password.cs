@@ -4,12 +4,12 @@ public record Password
 {
     public string Value { get; }
     
-    public Password(string value) => Value = value;
+    private Password(string value) => Value = value;
 
     public static Password Of(string value)
     {
-        ArgumentNullException.ThrowIfNullOrWhiteSpace(value);
-        ArgumentNullException.ThrowIfNullOrEmpty(value);
+        ArgumentException.ThrowIfNullOrWhiteSpace(value);
+        ArgumentException.ThrowIfNullOrEmpty(value);
 
         return new Password(value);
     }

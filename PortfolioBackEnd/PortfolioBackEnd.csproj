@@ -13,8 +13,6 @@
 
     <ItemGroup>
       <Folder Include="Application\" />
-      <Folder Include="Domain\Projects\" />
-      <Folder Include="Domain\WorkHistory\" />
       <Folder Include="Infrastructure\" />
       <Folder Include="WebAPI\" />
     </ItemGroup>

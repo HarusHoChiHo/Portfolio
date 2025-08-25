@@ -32,27 +32,39 @@ public class PersonalInfo : Aggregate<PersonalInfoId>
                                       UserId         userId,
                                       string?        biography)
     {
-        PersonalInfo personalInfo = new PersonalInfo(id, userId, biography);
+        var personalInfo = new PersonalInfo(id, userId, biography);
         
         return personalInfo;
     }
 
     public void AddContactInfo(ContactInfo contactInfo)
     {
-        ArgumentNullException.ThrowIfNull(contactInfo.Id.Value);
+        if (!contactInfo.Id.Value.HasValue)
+        {
+            throw new ArgumentNullException(nameof(contactInfo));
+        }
+
         _contactInfos.Add(contactInfo);
     }
 
     public void AddTechnology(Technology technology)
     {
-        ArgumentNullException.ThrowIfNull(technology.Id.Value);
+        if (!technology.Id.Value.HasValue)
+        {
+            throw new ArgumentNullException(nameof(technology.Id));
+        }
+
         _technologies.Add(technology);
     }
 
     public void RemoveContactInfo(ContactInfoId contactInfoId)
     {
-        ArgumentNullException.ThrowIfNull(contactInfoId.Value);
-        ContactInfo? contactInfo = _contactInfos.FirstOrDefault(x => x.Id.Value == contactInfoId.Value);
+        if (!contactInfoId.Value.HasValue)
+        {
+            throw new ArgumentNullException(nameof(contactInfoId));
+        }
+
+        var contactInfo = _contactInfos.FirstOrDefault(x => x.Id.Value == contactInfoId.Value);
 
         if (contactInfo is not null)
         {
@@ -63,8 +75,12 @@ public class PersonalInfo : Aggregate<PersonalInfoId>
 
     public void RemoveTechnology(TechnologyId technologyId)
     {
-        ArgumentNullException.ThrowIfNull(technologyId.Value);
-        Technology? technology = _technologies.FirstOrDefault(x => x.Id.Value == technologyId.Value);
+        if (!technologyId.Value.HasValue)
+        {
+            throw new ArgumentNullException(nameof(technologyId));
+        }
+
+        var technology = _technologies.FirstOrDefault(x => x.Id.Value == technologyId.Value);
 
         if (technology is not null)
         {
