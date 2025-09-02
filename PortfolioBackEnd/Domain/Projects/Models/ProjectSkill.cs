@@ -24,11 +24,7 @@ public class ProjectSkill : Entity<ProjectSkill>
     {
         ArgumentException.ThrowIfNullOrEmpty(name);
         ArgumentException.ThrowIfNullOrEmpty(category);
-
-        if (!projectId.Value.HasValue)
-        {
-            throw new ArgumentNullException($"{nameof(ProjectSkill)} - {nameof(projectId)}");
-        }
+        ArgumentNullException.ThrowIfNull(projectId.Value, nameof(projectId));
 
         return new ProjectSkill(projectId,
                                 name,

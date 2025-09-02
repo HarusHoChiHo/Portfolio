@@ -62,8 +62,6 @@ public class Project : Entity<ProjectId>
                            isReleased);
     }
 
-   //TODO: Add add ProjectRole, ProjectLink, ProjectImage, ProjectSkill
-    
     public void Update(string  name,
                        string? description,
                        string? details,
@@ -75,5 +73,98 @@ public class Project : Entity<ProjectId>
         Details = details;
         Order = order;
         IsReleased = isReleased;
+    }
+    
+    public void AddProjectRole(ProjectRole projectRole)
+    {
+        ArgumentNullException.ThrowIfNull(projectRole.ProjectId);
+        _projectRoles.Add(projectRole);
+    }
+
+    public void AddProjectLink(ProjectLink projectLink)
+    {
+        ArgumentNullException.ThrowIfNull(projectLink.ProjectId);
+        _projectLinks.Add(projectLink);
+    }
+
+    public void AddProjectImage(ProjectImage projectImage)
+    {
+        ArgumentNullException.ThrowIfNull(projectImage.ProjectId);
+        _projectImages.Add(projectImage);
+    }
+
+    public void UpdateProjectRole(ProjectRole projectRole)
+    {
+        ArgumentNullException.ThrowIfNull(projectRole.ProjectId);
+        ArgumentNullException.ThrowIfNull(projectRole.Id);
+        var role = _projectRoles.SingleOrDefault(x => x.Id == projectRole.Id);
+
+        if (role is not null)
+        {
+            _projectRoles.Remove(role);
+            _projectRoles.Add(projectRole);
+        }
+    }
+
+    public void UpdateProjectLink(ProjectLink projectLink)
+    {
+        ArgumentNullException.ThrowIfNull(projectLink.ProjectId);
+        var link = _projectLinks.SingleOrDefault(x => x.Id == projectLink.Id);
+
+        if (link is not null)
+        {
+            _projectLinks.Remove(link);
+            _projectLinks.Add(projectLink);
+        }
+    }
+
+    public void UpdateProjectImage(ProjectImage projectImage)
+    {
+        ArgumentNullException.ThrowIfNull(projectImage.ProjectId);
+        ArgumentNullException.ThrowIfNull(projectImage.Id);
+        
+        var image = _projectImages.SingleOrDefault(x => x.Id == projectImage.Id);
+        
+        if (image is not null)
+        {
+            _projectImages.Remove(image);
+            _projectImages.Add(projectImage);
+        }
+    }
+
+    public void RemoveProjectRole(ProjectRoleId projectRoleId)
+    {
+        ArgumentNullException.ThrowIfNull(projectRoleId);
+        
+        var role = _projectRoles.SingleOrDefault(x => x.Id == projectRoleId);
+
+        if (role is not null)
+        {
+            _projectRoles.Remove(role);
+        }
+    }
+
+    public void RemoveProjectLink(ProjectLinkId projectLinkId)
+    {
+        ArgumentNullException.ThrowIfNull(projectLinkId);
+        
+        var link = _projectLinks.SingleOrDefault(x => x.Id == projectLinkId);
+
+        if (link is not null)
+        {
+            _projectLinks.Remove(link);
+        }
+    }
+
+    public void RemoveProjectImage(ProjectImageId projectImageId)
+    {
+        ArgumentNullException.ThrowIfNull(projectImageId);
+        
+        var image = _projectImages.SingleOrDefault(x => x.Id == projectImageId);
+
+        if (image is not null)
+        {
+            _projectImages.Remove(image);
+        }
     }
 }

@@ -22,10 +22,7 @@ public class ProjectRole : Entity<ProjectRoleId>
                                      string?   roleDescription,
                                      bool      isReleased)
     {
-        if (!projectId.Value.HasValue)
-        {
-            throw new ArgumentNullException($"{nameof(ProjectRole)} - {nameof(projectId)}");
-        }
+        ArgumentNullException.ThrowIfNull(projectId.Value, nameof(projectId));
         
         return new ProjectRole(projectId, roleDescription, isReleased);
     }
